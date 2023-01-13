@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.TransaccionesController">
+   <children>
+      <TableView fx:id="tvTransacciones" layoutX="250.0" layoutY="146.0" prefHeight="441.0" prefWidth="1021.0" stylesheets="@Funciones.css">
+        <columns>
+          <TableColumn fx:id="tcId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tcAccion" prefWidth="403.0" text="Acción" />
+            <TableColumn fx:id="tcFechaCreacion" minWidth="0.0" prefWidth="180.0" text="Fecha creación" />
+            <TableColumn fx:id="tcObjecto" minWidth="0.0" prefWidth="136.0" text="Objeto" />
+            <TableColumn fx:id="tcUsuario" minWidth="0.0" prefWidth="226.0" text="Usuario" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnTransacciones" layoutX="697.0" layoutY="664.0" onAction="#onActionTransacciones" styleClass="button4" stylesheets="@Funciones.css" text="Cargar transacciónes" textFill="WHITE" />
+      <ImageView fx:id="imgSpinner" fitHeight="200.0" fitWidth="200.0" layoutX="660.0" layoutY="270.0" visible="false">
+         <image>
+            <Image url="@../imagenes/loader.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1520.0" stylesheets="@Funciones.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.ParametrosController">
+   <children>
+      <TableView fx:id="tbParametros" layoutX="347.0" layoutY="14.0" onMouseClicked="#onMouseClicked" prefHeight="478.0" prefWidth="917.0" stylesheets="@Funciones.css" AnchorPane.bottomAnchor="316.0" AnchorPane.leftAnchor="347.0" AnchorPane.rightAnchor="256.0" AnchorPane.topAnchor="14.0">
+        <columns>
+          <TableColumn fx:id="cl_Id" prefWidth="46.0" text="id" />
+            <TableColumn fx:id="cl_Objeto" prefWidth="167.0" text="Objeto" />
+            <TableColumn fx:id="cl_Nombre" prefWidth="242.0" text="Nombre" />
+          <TableColumn fx:id="cl_Estado" prefWidth="115.0" text="Estado" />
+            <TableColumn fx:id="cl_FechaCreacion" prefWidth="165.0" text="Fecha de creacion" />
+            <TableColumn fx:id="cl_FechaModificacion" prefWidth="181.0" text="Fecha de modificacion " />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnCargarParametros" layoutX="398.0" layoutY="763.0" onAction="#onActionBtnCargarParametros" prefHeight="28.0" prefWidth="153.0" styleClass="button4" stylesheets="@Funciones.css" text="Cargar Parametros" textFill="WHITE" />
+      <JFXButton fx:id="btnActualizarParametros" layoutX="578.0" layoutY="763.0" onAction="#onActionBtnActualizarParametros" prefHeight="28.0" prefWidth="153.0" styleClass="button4" stylesheets="@Funciones.css" text="Actualizar parametro" textFill="WHITE" />
+      <JFXButton fx:id="btnCrearParametros" layoutX="793.0" layoutY="765.0" onAction="#onActionBtnCrearParametros" prefHeight="25.0" prefWidth="153.0" styleClass="button4" stylesheets="@Funciones.css" text="Crear parametro" textFill="WHITE" />
+      <JFXButton fx:id="btnLimpiar" layoutX="996.0" layoutY="765.0" onAction="#onActionBtnLimpiar" prefHeight="25.0" prefWidth="153.0" styleClass="button4" stylesheets="@Funciones.css" text="Limpiar" textFill="WHITE" />
+      <JFXButton fx:id="btnDescartar" layoutX="1201.0" layoutY="765.0" onAction="#onActionDescartar" prefHeight="25.0" prefWidth="153.0" styleClass="button4" stylesheets="@Funciones.css" text="Descartar" textFill="WHITE" />
+      <VBox layoutX="672.0" layoutY="491.0" prefHeight="200.0" prefWidth="267.0" spacing="10.0">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="18.0" prefWidth="204.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Id:" />
+                  <JFXTextField fx:id="txtparametro_Nombre" focusColor="WHITE" prefHeight="28.0" prefWidth="278.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="204.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
+                  <JFXTextField fx:id="txtparametro_ID" focusColor="WHITE" labelFloat="true" prefHeight="28.0" prefWidth="231.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="38.0" prefHeight="18.0" prefWidth="204.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de Creación " />
+                  <JFXTextField fx:id="txtFecha_Creacion" focusColor="WHITE" prefHeight="28.0" prefWidth="204.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="66.0" prefHeight="18.0" prefWidth="204.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de modificación:" />
+                  <JFXTextField fx:id="txtFecha_Modificacion" prefHeight="3.0" prefWidth="145.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="66.0" prefHeight="18.0" prefWidth="204.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Objeto:" />
+                  <JFXTextField fx:id="txtParemetro_objeto" focusColor="WHITE" labelFloat="true" prefHeight="28.0" prefWidth="236.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="122.0" prefHeight="18.0" prefWidth="204.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:" />
+                  <JFXTextField fx:id="txtParametro_estado" focusColor="WHITE" labelFloat="true" prefHeight="28.0" prefWidth="237.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fx:id="imgSpinner" fitHeight="200.0" fitWidth="200.0" layoutX="710.0" layoutY="180.0" visible="false">
+         <image>
+            <Image url="@../imagenes/loader.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

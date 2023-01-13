@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.RealizarPagosController">
+   <children>
+      <TableView fx:id="tbPagos" layoutX="33.0" layoutY="107.0" prefHeight="508.0" prefWidth="1463.0" stylesheets="@Funciones.css" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="107.0">
+        <columns>
+            <TableColumn fx:id="clIdValorImpositivo" minWidth="0.0" prefWidth="136.0" text="id Cobro" />
+          <TableColumn fx:id="clCedula" prefWidth="75.0" text="Cédula" />
+          <TableColumn fx:id="clNombre" prefWidth="151.0" text="Nombre" />
+            <TableColumn fx:id="clCorreo" prefWidth="166.0" text="Correo electronico" />
+            <TableColumn fx:id="clTelefono" prefWidth="115.0" text="Telefono" />
+            <TableColumn fx:id="clEmisionCobro" prefWidth="145.0" text="Fecha emision cobro" />
+            <TableColumn fx:id="clTipoServicio" minWidth="0.0" prefWidth="186.0" text="Tipo de Servicio" />
+            <TableColumn fx:id="clRegistro" prefWidth="127.0" text="Fecha de registro" />
+            <TableColumn fx:id="clEstado" prefWidth="81.0" text="Estado" />
+            <TableColumn fx:id="clValorImpuesto" prefWidth="134.0" text="Valor del impuesto" />
+            <TableColumn fx:id="clDescripcion" prefWidth="146.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnBuscar" buttonType="RAISED" layoutX="375.0" layoutY="734.0" onAction="#Buscar" prefHeight="40.0" prefWidth="152.0" styleClass="button4" stylesheets="@Funciones.css" text="Buscar" textFill="WHITE" />
+      <JFXButton fx:id="btnCancelarCobro" buttonType="RAISED" layoutX="765.0" layoutY="734.0" onAction="#CancelarCobro" prefHeight="40.0" prefWidth="152.0" styleClass="button4" stylesheets="@Funciones.css" text="Cancelar cobro" textFill="#eeeeee" />
+      <JFXButton fx:id="btnLimpiar" buttonType="RAISED" layoutX="951.0" layoutY="734.0" onAction="#Limpiar" prefHeight="40.0" prefWidth="152.0" styleClass="button4" stylesheets="@Funciones.css" text="Limpiar" textFill="#f8f8f8" />
+      <Label layoutX="36.0" layoutY="659.0" styleClass="label-bright" stylesheets="@Funciones.css" text="Total por pagar: " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtTotal" layoutX="145.0" layoutY="650.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+      <JFXButton fx:id="btnCancelarCobroEspecifico" buttonType="RAISED" layoutX="565.0" layoutY="734.0" onAction="#CancelarCobroEspecifico" prefHeight="40.0" prefWidth="152.0" styleClass="button4" stylesheets="@Funciones.css" text="Cancelar cobro especifico" textFill="WHITE" />
+      <TextField fx:id="txtBuscarxCedula" layoutX="1344.0" layoutY="68.0" />
+      <ImageView fx:id="imgSpinner" fitHeight="200.0" fitWidth="200.0" layoutX="660.0" layoutY="280.0" visible="false">
+         <image>
+            <Image url="@../imagenes/loader.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="apBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1800.0" stylesheets="@Funciones.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.GerentePrincipalController">
+   <children>
+      <AnchorPane fx:id="apFront" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1800.0" stylesheets="@Funciones.css" />
+      <AnchorPane fx:id="apSecundario" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1000.0" prefWidth="1800.0" styleClass="root" stylesheets="@Funciones.css">
+         <children>
+            <Pane layoutX="2.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="149.0" prefWidth="1800.0" styleClass="head-background" stylesheets="@Login.css">
+               <children>
+                  <Label layoutX="224.0" layoutY="47.0" prefHeight="53.0" prefWidth="236.0" text="Municipalidad" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="100.0" text="PROGRAMACION 3, UNIVERSIDAD NACIONAL " textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnUsuarioLoguado" layoutX="1583.0" layoutY="104.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="184.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="EDIT PROFILE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="92.0" fitWidth="90.0" layoutX="1630.0" layoutY="8.0">
+                     <image>
+                        <Image url="@../imagenes/LogoUsuario.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="71.0" layoutY="47.0" prefHeight="137.0" prefWidth="142.0" style="-fx-background-color: #fff;">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="139.0" layoutX="11.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </Pane>
+            <HBox layoutX="246.0" layoutY="146.0" prefHeight="30.0" prefWidth="1554.0" style="-fx-background-color: #490047;">
+               <children>
+                  <Text fx:id="txtLogeado" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="txtRol" fill="WHITE" layoutX="15.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Label fx:id="lbl_pending" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Pending Projects(12)" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lbl_completed" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Completed Projects(2)" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <BorderPane fx:id="apRoot" layoutX="-5.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="991.0" prefWidth="1819.0">
+               <left>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="252.0" spacing="15.0" style="-fx-background-color: #05071F;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="252.0" text="SISTEMA" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="60.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXButton fx:id="btnValoresImpositivos" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#onActionValoresImp" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Valores impositivos" textFill="#ebebeb">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/icons8_US_Dollar_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </JFXButton>
+                        <Label layoutX="10.0" layoutY="70.0" prefHeight="30.0" prefWidth="252.0" text="REGISTRO" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </Label>
+                        <JFXButton fx:id="btnCotribuyenteService" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="309.0" onAction="#onActionContribuyenteServicio" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Contribuyente Servicio" textFill="#ebebeb">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/icons8_US_Dollar_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </JFXButton>
+                        <Label layoutX="10.0" layoutY="70.0" prefHeight="30.0" prefWidth="252.0" text="COBROS" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </Label>
+                        <JFXButton fx:id="btnGenerarCobros" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#onActionGenerarCobros" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Generacion cobros" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/reliabilty.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btnExpCancl" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#oActionExpCobrosCanc" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Exportar cobros cancelados" textFill="#e8e8e8">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/icons8_Workflow_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCobrosGenerados" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#onActionCobrosGen" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Exportar cobros generados" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/projections.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </JFXButton>
+                        <Button fx:id="btnCerrarSesion" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#onActionCerrarSesion" prefHeight="42.0" prefWidth="259.0" stylesheets="@Login.css" text="Cerrar Sesion">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/icons8_Sign_Out_32px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="200.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="30.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </left>
+               <top>
+                  <VBox fx:id="vbAcomodo" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

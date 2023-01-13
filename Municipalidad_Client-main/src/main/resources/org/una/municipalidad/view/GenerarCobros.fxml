@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.GenerarCobros">
+   <children>
+      <AnchorPane fx:id="ancMensual" prefHeight="808.0" prefWidth="1520.0" visible="false">
+         <children>
+            <TableView fx:id="tbvCobrosGeneradosMensuales" prefHeight="476.0" prefWidth="1096.0" stylesheets="@Login.css" visible="false" AnchorPane.bottomAnchor="246.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="211.0" AnchorPane.topAnchor="86.0">
+              <columns>
+                <TableColumn fx:id="clId" prefWidth="67.0" text="Id" />
+                <TableColumn fx:id="clEstado" prefWidth="83.0" text="Estado" />
+                  <TableColumn fx:id="clFechaCobro" prefWidth="308.0" text="Fecha de Cobro" />
+                  <TableColumn fx:id="clMonto" prefWidth="155.0" text="Monto" />
+                  <TableColumn fx:id="clContribuyente" prefWidth="482.0" text="Contribuyente Servicio" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnGenerarCobrosMensuales" layoutX="658.0" layoutY="665.0" onAction="#onActionBtnGenerarCobrosMensuales" prefHeight="53.0" prefWidth="206.0" styleClass="Boton" stylesheets="@Login.css" text="Generar Cobros Mensuales" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="658.0" AnchorPane.rightAnchor="656.0" AnchorPane.topAnchor="665.0" />
+            <DatePicker fx:id="dtpFechaInicioBus" layoutX="535.0" layoutY="592.0" promptText="Fecha Inicio" AnchorPane.bottomAnchor="191.0" AnchorPane.leftAnchor="535.0" AnchorPane.rightAnchor="811.0" AnchorPane.topAnchor="592.0" />
+            <DatePicker fx:id="dtpFechaFinalBus" layoutX="837.0" layoutY="592.0" promptText="Fecha Final" />
+            <Text fx:id="txtCobro1" fill="WHITE" layoutX="600.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancMenu" prefHeight="808.0" prefWidth="1520.0">
+         <children>
+            <Text fill="WHITE" layoutX="614.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido al apartado de generacion de cobros" wrappingWidth="256.67578125" />
+            <Text fill="WHITE" layoutX="535.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A continuacion se le presentaran tres botones seleccione uno para continuar" wrappingWidth="413.67578125" />
+            <JFXButton fx:id="btnMensual" layoutX="674.0" layoutY="273.0" onAction="#onActionBtnMensual" prefHeight="50.0" prefWidth="150.0" styleClass="Boton" stylesheets="@Login.css" text="Mensual" />
+            <JFXButton fx:id="btnBimestral" layoutX="674.0" layoutY="368.0" onAction="#onActionBtnBimestral" prefHeight="50.0" prefWidth="150.0" styleClass="Boton" stylesheets="@Login.css" text="Bimestral" />
+            <JFXButton fx:id="btnAnual" layoutX="674.0" layoutY="452.0" onAction="#onActionBtnAnual" prefHeight="50.0" prefWidth="150.0" styleClass="Boton" stylesheets="@Login.css" text="Anual" />
+            <Text fill="WHITE" layoutX="535.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mensual = Generará los cobros mensualmente estos son los de Ruta de Buses " wrappingWidth="450.67578125" />
+            <Text fill="WHITE" layoutX="481.0" layoutY="622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bimestral = Generará los cobros bimestrales estos son los de Limpieza de vias y parques y ornatos" wrappingWidth="557.67578125" />
+            <Text fill="WHITE" layoutX="493.0" layoutY="684.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anual = Generará los cobros anualmente estos son los cobros de Derecho de Cementerio " wrappingWidth="512.67578125" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancBimestral" layoutX="10.0" layoutY="10.0" prefHeight="808.0" prefWidth="1520.0" visible="false">
+         <children>
+            <TableView fx:id="tbvCobrosGeneradosBimestral" prefHeight="476.0" prefWidth="1096.0" stylesheets="@Login.css" visible="false" AnchorPane.bottomAnchor="246.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="211.0" AnchorPane.topAnchor="86.0">
+               <columns>
+                  <TableColumn fx:id="clId1" prefWidth="67.0" text="Id" />
+                  <TableColumn fx:id="clEstado1" prefWidth="83.0" text="Estado" />
+                  <TableColumn fx:id="clFechaCobro1" prefWidth="308.0" text="Fecha de Cobro" />
+                  <TableColumn fx:id="clMonto1" prefWidth="155.0" text="Monto" />
+                  <TableColumn fx:id="clContribuyente1" prefWidth="482.0" text="Contribuyente Servicio" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="btnGenerarCobrosBimestrales" layoutX="658.0" layoutY="665.0" onAction="#onActionBtnGenerarBimestrales" prefHeight="53.0" prefWidth="206.0" styleClass="Boton" stylesheets="@Login.css" text="Generar Cobros Bimestrales" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="658.0" AnchorPane.rightAnchor="656.0" AnchorPane.topAnchor="665.0" />
+            <DatePicker fx:id="dtpFechaInicioLimpieza" layoutX="535.0" layoutY="592.0" promptText="Fecha Inicio" AnchorPane.bottomAnchor="191.0" AnchorPane.leftAnchor="535.0" AnchorPane.rightAnchor="811.0" AnchorPane.topAnchor="592.0" />
+            <DatePicker fx:id="dtpFechaFinalLimpieza" layoutX="837.0" layoutY="592.0" promptText="Fecha Final" />
+            <Text fx:id="txtCobro11" fill="WHITE" layoutX="600.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancAnuales" layoutX="20.0" layoutY="20.0" prefHeight="808.0" prefWidth="1520.0" visible="false">
+         <children>
+            <TableView fx:id="tbvCobrosGeneradosAnuales" prefHeight="476.0" prefWidth="1096.0" stylesheets="@Login.css" visible="false" AnchorPane.bottomAnchor="246.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="211.0" AnchorPane.topAnchor="86.0">
+               <columns>
+                  <TableColumn fx:id="clId11" prefWidth="67.0" text="Id" />
+                  <TableColumn fx:id="clEstado11" prefWidth="83.0" text="Estado" />
+                  <TableColumn fx:id="clFechaCobro11" prefWidth="308.0" text="Fecha de Cobro" />
+                  <TableColumn fx:id="clMonto11" prefWidth="155.0" text="Monto" />
+                  <TableColumn fx:id="clContribuyente11" prefWidth="482.0" text="Contribuyente Servicio" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="btnGenerarCobrosAnuales" layoutX="658.0" layoutY="665.0" onAction="#onActionBtnGenerarAnuales" prefHeight="53.0" prefWidth="206.0" styleClass="Boton" stylesheets="@Login.css" text="Generar Cobros anuales" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="658.0" AnchorPane.rightAnchor="656.0" AnchorPane.topAnchor="665.0" />
+            <DatePicker fx:id="dtpFechaInicioCementerio" layoutX="535.0" layoutY="592.0" promptText="Fecha Inicio" AnchorPane.bottomAnchor="191.0" AnchorPane.leftAnchor="535.0" AnchorPane.rightAnchor="811.0" AnchorPane.topAnchor="592.0" />
+            <DatePicker fx:id="dtpFechaFinalCementerio" layoutX="837.0" layoutY="592.0" promptText="Fecha Final" />
+            <Text fx:id="txtCobro2" fill="WHITE" layoutX="600.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="imgSpinner" fitHeight="200.0" fitWidth="200.0" layoutX="650.0" layoutY="200.0" visible="false">
+         <image>
+            <Image url="@../imagenes/loader.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

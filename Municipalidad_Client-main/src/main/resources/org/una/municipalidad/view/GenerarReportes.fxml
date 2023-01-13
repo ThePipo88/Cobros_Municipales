@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.GenerarReportesController">
+   <children>
+      <TableView fx:id="tbvReporte" layoutX="96.0" layoutY="46.0" prefHeight="535.0" prefWidth="1329.0" stylesheets="@Login.css" AnchorPane.bottomAnchor="227.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="46.0">
+        <columns>
+          <TableColumn fx:id="tcId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tcIdContribuyente" prefWidth="117.0" text="ID Contribuyente" />
+            <TableColumn fx:id="tcNombre" prefWidth="353.0" text="Nombre" />
+            <TableColumn fx:id="tcValorImpositivo" prefWidth="202.0" text="Valor Impositivo" />
+            <TableColumn fx:id="tcTotal" prefWidth="214.0" text="Total" />
+            <TableColumn fx:id="tcFechaEmision" prefWidth="367.0" text="Fecha de Emision" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnRecibosContribuyente" layoutX="445.0" layoutY="703.0" onAction="#onActionBtnReciboscontribuyente" styleClass="button4" stylesheets="@Login.css" text="Recibos Contribuyente" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="445.0" AnchorPane.rightAnchor="939.0" AnchorPane.topAnchor="703.0" />
+      <JFXButton fx:id="btnValorImpositivo" layoutX="736.0" layoutY="741.0" onAction="#onActionBtnValorImpositivo" styleClass="button4" stylesheets="@Login.css" text="Valor Impositivo" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="736.0" AnchorPane.rightAnchor="680.0" AnchorPane.topAnchor="741.0" />
+      <JFXButton fx:id="btnGenerarReporte" layoutX="1003.0" layoutY="703.0" onAction="#onActionBtnGenerarReporte" styleClass="button4" stylesheets="@Login.css" text="Generar Reporte" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="1003.0" AnchorPane.rightAnchor="413.0" AnchorPane.topAnchor="703.0" />
+      <DatePicker fx:id="dtpFechaInicial" layoutX="426.0" layoutY="619.0" promptText="Fecha Inicial" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="426.0" AnchorPane.rightAnchor="920.0" AnchorPane.topAnchor="619.0" />
+      <DatePicker fx:id="dtpFechaFinal" layoutX="940.0" layoutY="632.0" promptText="Fecha Final" AnchorPane.bottomAnchor="151.0" AnchorPane.leftAnchor="940.0" AnchorPane.rightAnchor="406.0" AnchorPane.topAnchor="632.0" />
+   </children>
+</AnchorPane>

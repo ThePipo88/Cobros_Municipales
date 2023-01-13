@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.ExportarCobrosCanController">
+   <children>
+      <JFXButton fx:id="btnCargarCobros" layoutX="454.0" layoutY="672.0" onAction="#onActionBtnCargarCobros" prefHeight="28.0" prefWidth="153.0" styleClass="button4" stylesheets="@Funciones.css" text="Cargar Cobros" textFill="WHITE" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="913.0" AnchorPane.topAnchor="672.0" />
+      <JFXButton fx:id="btnGenerarExcel" layoutX="625.0" layoutY="730.0" onAction="#onActionbtnGenerarExcel" prefHeight="28.0" prefWidth="153.0" styleClass="button4" stylesheets="@Funciones.css" text="Generar en Excel" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="625.0" AnchorPane.rightAnchor="742.0" AnchorPane.topAnchor="730.0" />
+      <JFXButton fx:id="btnLimpiar" layoutX="802.0" layoutY="672.0" onAction="#onActionBtnLimpiar" prefHeight="28.0" prefWidth="153.0" styleClass="button4" stylesheets="@Funciones.css" text="Limpiar" textFill="WHITE" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="802.0" AnchorPane.rightAnchor="565.0" AnchorPane.topAnchor="672.0" />
+      <TableView fx:id="tbCancelados" layoutX="301.0" layoutY="37.0" opacity="0.74" prefHeight="564.0" prefWidth="855.0" stylesheets="@Funciones.css" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="301.0" AnchorPane.rightAnchor="364.0" AnchorPane.topAnchor="37.0">
+        <columns>
+          <TableColumn fx:id="cl_id" prefWidth="108.0" text="id" />
+          <TableColumn minWidth="0.0" prefWidth="0.0" />
+            <TableColumn fx:id="cl_Nombre" prefWidth="197.0" text="Contribuyente" />
+            <TableColumn fx:id="cl_FechaCreacion" prefWidth="164.0" text="Fecha de Creación" />
+            <TableColumn fx:id="cl_Descripcion" prefWidth="208.0" text="Descripcion" />
+            <TableColumn fx:id="cl_Monto" prefWidth="177.0" text="Monto cancelado" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="382.0" layoutY="631.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha inicial:" wrappingWidth="80.3017578125" AnchorPane.bottomAnchor="173.486328125" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="1057.6982421875" AnchorPane.topAnchor="615.513671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="701.0" layoutY="631.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha final:" wrappingWidth="80.3017578125" AnchorPane.bottomAnchor="173.486328125" AnchorPane.leftAnchor="701.0" AnchorPane.rightAnchor="738.6982421875" AnchorPane.topAnchor="615.513671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="dateFinal" layoutX="781.0" layoutY="614.0" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="781.0" AnchorPane.rightAnchor="565.0" AnchorPane.topAnchor="614.0" />
+      <DatePicker fx:id="dateInicial" layoutX="462.0" layoutY="614.0" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="884.0" AnchorPane.topAnchor="614.0" />
+      <ImageView fx:id="imgSpinner" fitHeight="200.0" fitWidth="200.0" layoutX="630.0" layoutY="220.0" visible="false">
+         <image>
+            <Image url="@../imagenes/loader.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

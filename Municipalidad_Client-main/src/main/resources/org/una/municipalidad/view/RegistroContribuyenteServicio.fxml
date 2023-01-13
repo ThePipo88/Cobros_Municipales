@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onKeyPressed="#onActionKeyPressed" prefHeight="808.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.RegistroContribuyenteServicioController">
+   <children>
+      <VBox layoutX="293.0" layoutY="182.0" prefHeight="266.0" prefWidth="266.0" spacing="10.0">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="209.0" spacing="10.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="txtCedulaCont" focusColor="WHITE" prefHeight="25.0" prefWidth="297.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="29.0" prefWidth="209.0" spacing="10.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="txtNombreCont" focusColor="WHITE" prefHeight="25.0" prefWidth="234.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="49.0" prefHeight="29.0" prefWidth="209.0" spacing="10.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="txtCorreoCont" focusColor="WHITE" prefHeight="25.0" prefWidth="281.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="88.0" prefHeight="29.0" prefWidth="209.0" spacing="10.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="txtDireccionCont" focusColor="WHITE" prefHeight="25.0" prefWidth="301.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="127.0" prefHeight="29.0" prefWidth="209.0" spacing="5.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha nacimiento:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="dateNacimientoCont" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="127.0" prefHeight="29.0" prefWidth="209.0" spacing="10.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="txtTelefonoCont" focusColor="WHITE" prefHeight="25.0" prefWidth="228.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView fx:id="tvValoresImpositivos" layoutX="671.0" layoutY="120.0" onMouseClicked="#onMouseClicked" prefHeight="339.0" prefWidth="774.0" stylesheets="@Funciones.css" AnchorPane.bottomAnchor="349.0" AnchorPane.leftAnchor="671.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="120.0">
+        <columns>
+          <TableColumn fx:id="tc_Id" prefWidth="59.0" text="Id" />
+            <TableColumn fx:id="tc_Tipo" prefWidth="71.0" text="Tipo" />
+            <TableColumn fx:id="tc_Descripcion" prefWidth="270.0" text="Descripción" />
+            <TableColumn fx:id="tc_Porcentaje" prefWidth="98.0" text="Porcentaje" />
+            <TableColumn fx:id="tc_FechaCreacion" prefWidth="120.0" text="Fecha creación" />
+          <TableColumn fx:id="tc_Actualizacion" prefWidth="155.0" text="Fecha actualización" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="617.0" layoutY="571.0" prefHeight="28.0" prefWidth="382.0" spacing="10.0" />
+      <JFXButton fx:id="btnAsignarValorUsuario" layoutX="747.0" layoutY="703.0" onAction="#onActionAsignarValor" styleClass="button4" stylesheets="@Funciones.css" text="Asignar valor a usuario" textFill="WHITE" />
+      <VBox alignment="TOP_RIGHT" layoutX="683.0" layoutY="537.0" prefHeight="125.0" prefWidth="251.0" spacing="5.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="199.0">
+               <children>
+                  <Text boundsType="VISUAL" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="txtUsuarioSeleccionado" focusColor="WHITE" prefHeight="28.0" prefWidth="216.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="#f2f2f2" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="221.0">
+               <children>
+                  <Text boundsType="VISUAL" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Id servicio:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="txtIdServicio" focusColor="WHITE" prefHeight="28.0" prefWidth="194.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="221.0">
+               <children>
+                  <Text boundsType="VISUAL" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Porcentaje:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="txtPorcentaje" focusColor="WHITE" prefHeight="28.0" prefWidth="197.0" styleClass="labelDash" stylesheets="@Login.css" unFocusColor="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

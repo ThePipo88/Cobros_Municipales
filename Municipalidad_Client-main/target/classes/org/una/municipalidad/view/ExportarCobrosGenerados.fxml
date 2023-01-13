@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.una.municipalidad.controller.ExportarCobrosGeneradosController">
+   <children>
+      <TableView fx:id="tbCobrosGenerados" layoutX="294.0" layoutY="42.0" prefHeight="452.0" prefWidth="957.0" stylesheets="@Funciones.css" AnchorPane.bottomAnchor="314.0" AnchorPane.leftAnchor="294.0" AnchorPane.rightAnchor="269.0" AnchorPane.topAnchor="42.0">
+        <columns>
+          <TableColumn fx:id="cl_id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="cl_Estado" prefWidth="75.0" text="Estado" />
+            <TableColumn fx:id="cl_FechaCobro" prefWidth="136.0" text="Fecha de cobro" />
+            <TableColumn fx:id="cl_Monto" prefWidth="138.0" text="Monto" />
+            <TableColumn fx:id="cl_Contribuyente" prefWidth="225.0" text="Contribuyente" />
+            <TableColumn fx:id="cl_Servicio" prefWidth="215.0" text="Servicio" />
+            <TableColumn fx:id="cl_IdServicio" prefWidth="92.0" text="Id Servicio" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnCargarCobros" layoutX="446.0" layoutY="627.0" onAction="#onActionCargarCobros" prefHeight="25.0" prefWidth="132.0" styleClass="button4" stylesheets="@Funciones.css" text="Cargar Cobros" textFill="WHITE" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="446.0" AnchorPane.rightAnchor="942.0" AnchorPane.topAnchor="627.0" />
+      <JFXButton fx:id="btnGenerarExcel" layoutX="684.0" layoutY="627.0" onAction="#onActionGenerarExcel" prefHeight="25.0" prefWidth="132.0" styleClass="button4" stylesheets="@Funciones.css" text="Generar Excel" textFill="WHITE" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="684.0" AnchorPane.rightAnchor="704.0" AnchorPane.topAnchor="627.0" />
+      <JFXButton fx:id="btnLimpiar" layoutX="943.0" layoutY="627.0" onAction="#onActionLimpiar" prefHeight="25.0" prefWidth="145.0" styleClass="button4" stylesheets="@Funciones.css" text="Limpiar" textFill="WHITE" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="943.0" AnchorPane.rightAnchor="445.0" AnchorPane.topAnchor="627.0" />
+      <ImageView fx:id="imgSpinner" fitHeight="200.0" fitWidth="200.0" layoutX="670.0" layoutY="170.0" visible="false">
+         <image>
+            <Image url="@../imagenes/loader.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
